@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
     
     vector<int> count, sumCount, sortedInput;
     count.resize(MAX_INT+1);
-    sumCount.resize(MAX_INT+2);
+    sumCount.resize(MAX_INT+1);
     sortedInput.resize(INPUT_SIZE);
     
     countingSort(numbers, count, sumCount, sortedInput);
