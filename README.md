@@ -3,11 +3,11 @@ This is a basic C++ program to read in a .txt file of numbers from the command l
 
 ## Running
 First compile, 
-'''
+```
 gcc main.cpp -o countingsort
-'''
+```
 
 Then run,
-'''
+```
 ./countingsort
-'''
+```
