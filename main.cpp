@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
     
     vector<int> count, sumCount, sortedInput;
     count.resize(MAX_INT+1);
-    sumCount.resize(MAX_INT+1);
+    sumCount.resize(MAX_INT+2);
     sortedInput.resize(INPUT_SIZE);
     
     countingSort(numbers, count, sumCount, sortedInput);
@@ -73,7 +73,6 @@ void countingSort(vector<int> input, vector<int> & count, vector<int> & sumCount
         sortedInput[sumCount[input[i]]-1] = input[i];
         --sumCount[input[i]];
     }
-    
 }
 
 /*
@@ -134,7 +133,7 @@ int findMax(vector<int> numbers) {
            vector<int> & sortedInput - populate elements in array in sorted order using count and sumCount vecor arrays
 */
 void print(vector<int> input, vector<int> & count, vector<int> & sumCount, vector<int> & sortedInput) {
-    cout << "Unsorted List: \n";
+    cout << "\nUnsorted List: \n";
     printInput(input);
     
     cout << "\nFrequency List: \n";
@@ -151,17 +150,17 @@ void print(vector<int> input, vector<int> & count, vector<int> & sumCount, vecto
 void printInput(vector<int> input) {
     for (int i=0; i < INPUT_SIZE; i++)
         cout << input[i] << " ";
-    cout << endl;
+    cout << "\n" << endl;
 }
 
 void printCount(vector<int> array) {
     int newline = 0;
     
-    for (int i=1; i <= MAX_INT; i++)
+    for (int i=0; i <= MAX_INT; i++)
     {
         //break array in 10 number increments
         if (newline == 10) {
-            cout << endl;
+            cout << " | " << i-10 << "-" << i-1 <<  endl;
             newline = 0;
         }
         cout << setw(2) << array[i] << " ";
