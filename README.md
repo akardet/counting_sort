@@ -1,2 +1,13 @@
-# counting_sort
-Implement a counting sort as explained in Section 8.2 of CLRS. The input should be in a text file whose name is passed as a command line argument (not redirected).
+# Counting Sort Algorithm
+This is a basic C++ program to read in a .txt file of numbers from the command line and order them, using the counting sort algorithm, from smallest digit to largest digit.
+
+## Running
+First compile, 
+'''
+gcc main.cpp -o countingsort
+'''
+
+Then run,
+'''
+./countingsort
+'''
