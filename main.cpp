@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
     
     vector<int> count, sumCount, sortedInput;
     count.resize(MAX_INT+1);
-    sumCount.resize(MAX_INT+1);
+    sumCount.resize(MAX_INT+2);
     sortedInput.resize(INPUT_SIZE);
     
     countingSort(numbers, count, sumCount, sortedInput);
@@ -61,7 +61,8 @@ void countingSort(vector<int> input, vector<int> & count, vector<int> & sumCount
     }
 
     //each element at each index stores the sum of the previous counts
-    for (int i=0; i <= MAX_INT; i++)
+    sumCount[0] += count[0];
+    for (int i=1; i <= MAX_INT; i++)
     {
         sumCount[i] = sumCount[i-1] + count[i];
     }
@@ -163,10 +164,8 @@ void printCount(vector<int> array) {
             cout << endl;
             newline = 0;
         }
-        else {
-            cout << setw(2) << array[i] << " ";
-            newline++;
-        }
+        cout << setw(2) << array[i] << " ";
+        newline++;
     }
     cout << endl;
 }
