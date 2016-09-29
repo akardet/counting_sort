@@ -9,5 +9,5 @@ g++ main.cpp -o countingsort
 
 Then run,
 ```
-./countingsort
+./countingsort [FILENAME]
 ```
